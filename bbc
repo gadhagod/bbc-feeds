@@ -1,0 +1,60 @@
+#!/usr/bin/env python
+
+import click
+import bbc_feeds as feeds
+
+@click.group()
+def bbc():
+    'Get BBC feeds of several categories'
+
+@bbc.command()
+@click.argument('category', required=True)
+@click.option('--limit', type=click.INT, required=False, default=False, help='Limit of entries')
+def news(category, limit):
+    if category == 'all':
+        click.echo(feeds.news().all(limit=limit))
+    if category == 'world':
+        click.echo(feeds.news().world(limit=limit))
+    if category == 'uk':
+        click.echo(feeds.news().uk(limit=limit))
+    if category == 'us':
+        click.echo(feeds.news().us(limit=limit))
+    if category == 'entertainment':
+        click.echo(feeds.news().entertainment(limit=limit))
+    if category == 'buisness':
+        click.echo(feeds.news().buisness(limit=limit))
+    if category == 'tech':
+        click.echo(feeds.news().tech(limit=limit))
+
+@bbc.command()
+@click.argument('category', required=True)
+@click.option('--limit', type=click.INT, required=False, default=False, help='Limit of entries')
+def sports(category, limit):
+    if category == 'all':
+        click.echo(feeds.sports().all(limit=limit))
+    if category == 'cricket':
+        click.echo(feeds.sports().cricket(limit=limit))
+    if category == 'soccer':
+        click.echo(feeds.sports().soccer(limit=limit))
+    if category == 'tennis':
+        click.echo(feeds.sports().tennis(limit=limit))
+    if category == 'athletics':
+        click.echo(feeds.sports().athletics(limit=limit))
+    if category == 'golf':
+        click.echo(feeds.sports().golf(limit=limit))
+    if category == 'boxing':
+        click.echo(feeds.sports().boxing(limit=limit))
+    if category == 'swimming':
+        click.echo(feeds.sports().swimming(limit=limit))
+    if category == 'cycling':
+        click.echo(feeds.sports().cycling(limit=limit))
+    if category == 'formula1':
+        click.echo(feeds.sports().formula1(limit=limit))
+
+@bbc.command()
+@click.argument('city_ID', required=True, type=click.INT)
+@click.option('--limit', type=click.INT, required=False, default=False, help='Limit of entries')
+def weather(city_id, limit):
+    click.echo(feeds.weather().forcast(city_id))
+
+bbc()

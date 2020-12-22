@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name='bbc-feeds',
-    version='1.0',
+    version='2.0',
     author='Aarav Borthakur',
     author_email='gadhaguy13@gmail.com',
     description='A python package to get news, weather, and sports from BBC',
@@ -17,6 +17,8 @@ setuptools.setup(
     ],
     install_requires=[
         'feedparser',
+        'click'
     ],
+    scripts=['./bbc'],
     python_requires='>=3.6'
 )

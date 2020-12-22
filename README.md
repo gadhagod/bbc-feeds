@@ -39,3 +39,17 @@ Import the library:
 - `weather().forecast(city_id)` (To get your city ID, search for it at [BBC Weather's Website](https://www.bbc.com/weather)).
 
 All functions have an optional parameter `limit`, where you can limit the number of entries.
+
+### CLI
+
+    Usage: bbc [OPTIONS] COMMAND [ARGS]...
+
+      Get BBC feeds of several categories
+
+    Options:
+      --help  Show this message and exit.
+
+    Commands:
+      news
+      sports
+      weather
