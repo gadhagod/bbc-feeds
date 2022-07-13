@@ -21,7 +21,7 @@ class news():
         return(parse(self.url + '/world/us_and_canada/rss.xml', limit=limit))
 
     def uk(self, limit=False):
-        return(parse(self.url + '/news/uk/rss.xml', limit=limit))
+        return(parse(self.url + '/uk/rss.xml', limit=limit))
 
     def enterainment(self, limit=False):
         return(parse(self.url + '/entertainment_and_arts/rss.xml', limit=limit))
