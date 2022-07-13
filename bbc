@@ -10,21 +10,24 @@ def bbc():
 @bbc.command()
 @click.argument('category', required=True)
 @click.option('--limit', type=click.INT, required=False, default=False, help='Limit of entries')
-def news(category, limit):
+@click.option('--edition', type=click.STRING, required=False, default='int', help='edition to use for top stories')
+def news(category, edition, limit):
     if category == 'all':
         click.echo(feeds.news().all(limit=limit))
     if category == 'world':
         click.echo(feeds.news().world(limit=limit))
     if category == 'uk':
         click.echo(feeds.news().uk(limit=limit))
-    if category == 'us':
-        click.echo(feeds.news().us(limit=limit))
+    if category == 'north_america':
+        click.echo(feeds.news().north_america(limit=limit))
     if category == 'entertainment':
         click.echo(feeds.news().entertainment(limit=limit))
-    if category == 'buisness':
-        click.echo(feeds.news().buisness(limit=limit))
+    if category == 'business':
+        click.echo(feeds.news().business(limit=limit))
     if category == 'tech':
         click.echo(feeds.news().tech(limit=limit))
+    if category == 'top_stories':
+        click.echo(feeds.news().top_stories(edition=edition, limit=limit))
 
 @bbc.command()
 @click.argument('category', required=True)
@@ -55,6 +58,6 @@ def sports(category, limit):
 @click.argument('city_ID', required=True, type=click.INT)
 @click.option('--limit', type=click.INT, required=False, default=False, help='Limit of entries')
 def weather(city_id, limit):
-    click.echo(feeds.weather().forcast(city_id))
+    click.echo(feeds.weather().forecast(city_id))
 
 bbc()
