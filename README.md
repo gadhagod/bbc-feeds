@@ -36,6 +36,10 @@ To get a list of the dictionary keys available use the [`keys()`](https://docs.p
 | `news().science()`       | Science and Environment | http://feeds.bbci.co.uk/news/science_and_environment/rss.xml | limit               |
 | `news().top_stories()`   | Home                    | http://feeds.bbci.co.uk/news/rss.xml?edition=int             | limit <br> edition  |
 
+top_stories() has the optional parameter edition which is used to set the edition to use when getting the top stories. You can set edition to the following:
+- uk -> UK Top stories
+- us - US Top stories
+- int - International Top stories
 ### Sports
 | Function Name          | Category   | RSS Feed                                         | Optional Parameters |
 |------------------------|------------|--------------------------------------------------|---------------------|
@@ -49,7 +53,9 @@ To get a list of the dictionary keys available use the [`keys()`](https://docs.p
 | `sports().boxing()`    | Boxing     | https://feeds.bbci.co.uk/sport/boxing/rss.xml    | limit               |
 | `sports().swimming()`  | Swimming   | https://feeds.bbci.co.uk/sport/swimming/rss.xml  | limit               |
 | `sports().cycling()`   | Cycling    | https://feeds.bbci.co.uk/sport/cycling/rss.xml   | limit               |
-| `sports().formula1()`  | Formula1   | https://feeds.bbci.co.uk/sport/formula1/rss.xml  | limit               |         
+| `sports().formula1()`  | Formula1   | https://feeds.bbci.co.uk/sport/formula1/rss.xml  | limit               |       
+
+Note: Football and soccer return the same results.
 
 ### Weather
 - `weather().forecast(city_id)` (To get your city ID, search for it on the [BBC Weather's Website](https://www.bbc.com/weather)).
