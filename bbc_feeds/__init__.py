@@ -23,7 +23,7 @@ class news():
     def uk(self, limit=False):
         return(parse(self.url + '/uk/rss.xml', limit=limit))
 
-    def enterainment(self, limit=False):
+    def entertainment(self, limit=False):
         return(parse(self.url + '/entertainment_and_arts/rss.xml', limit=limit))
 
     def business(self, limit=False):
