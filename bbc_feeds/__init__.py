@@ -76,5 +76,5 @@ class sports():
         return(parse(self.url + '/formula1/rss.xml', limit=limit))
     
 class weather():
-    def forcast(self, city_id, limit=False):
+    def forecast(self, city_id, limit=False):
         return(parse('https://weather-broker-cdn.api.bbci.co.uk/en/forecast/rss/3day/' + str(city_id), limit=limit))
