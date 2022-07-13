@@ -34,9 +34,6 @@ class news():
 
     def science(self, limit=False):
         return(parse(self.url + '/science_and_environment/rss.xml', limit=limit))
-
-    def culture(self, limit=False):
-        return(parse('https://www.bbc.com/culture/feed.rss', limit=limit))
     
     def top_stories(self, edition='int', limit=False):
         return(parse(self.url + f'/rss.xml?edition={edition}', limit=limit))
