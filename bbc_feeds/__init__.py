@@ -9,7 +9,7 @@ def parse(url, limit):
 
 class news():
     def __init__(self):
-        self.url = 'http://feeds.bbci.co.uk/news'
+        self.url = 'https://feeds.bbci.co.uk/news'
 
     def all(self, limit=False):
         return(parse(self.url + '/rss.xml', limit=limit))
@@ -40,7 +40,7 @@ class news():
 
 class sports():
     def __init__(self):
-        self.url = 'http://feeds.bbci.co.uk/sport'
+        self.url = 'https://feeds.bbci.co.uk/sport'
 
     def all(self, limit=False):
         return(parse(self.url + '/rss.xml', limit=limit))
@@ -77,4 +77,4 @@ class sports():
     
 class weather():
     def forecast(self, city_id, limit=False):
-        return(parse('https://weather-broker-cdn.api.bbci.co.uk/en/forecast/rss/3day/' + str(city_id), limit=limit))
+        return(parse('httpss://weather-broker-cdn.api.bbci.co.uk/en/forecast/rss/3day/' + str(city_id), limit=limit))
