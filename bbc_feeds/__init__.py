@@ -48,6 +48,9 @@ class sports():
     def cricket(self, limit=False):
         return(parse(self.url + '/cricket/rss.xml', limit=limit))
 
+    def football(self, limit=False):
+        return(parse(self.url + '/football/rss.xml', limit=limit))
+
     def soccer(self, limit=False):
         return(parse(self.url + '/football/rss.xml', limit=limit))
 
