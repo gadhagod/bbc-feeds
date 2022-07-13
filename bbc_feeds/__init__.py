@@ -37,6 +37,9 @@ class news():
 
     def culture(self, limit=False):
         return(parse('https://www.bbc.com/culture/feed.rss', limit=limit))
+    
+    def top_stories(self, edition='int', limit=False):
+        return(parse(self.url + f'/rss.xml?edition={edition}', limit=limit))
 
 class sports():
     def __init__(self):
