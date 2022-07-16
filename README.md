@@ -37,7 +37,7 @@ To get a list of the dictionary keys available use the [`keys()`](https://docs.p
 | `news().top_stories()`   | Home                    | http://feeds.bbci.co.uk/news/rss.xml?edition=int             | limit <br> edition  |
 
 top_stories() has the optional parameter edition which is used to set the edition to use when getting the top stories. You can set edition to the following:
-- uk -> UK Top stories
+- uk - UK Top stories
 - us - US Top stories
 - int - International Top stories
 ### Sports
