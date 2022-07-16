@@ -22,6 +22,7 @@ for story in stories:
     print(story.summary)
 ```
 To get a list of the dictionary keys available use the [`keys()`](https://docs.python.org/3/library/stdtypes.html#dict.keys) function.
+
 ## Functions
 ### News
 | Function Name            | Category                | RSS Feed                                                     | Optional Parameters |
@@ -40,13 +41,13 @@ top_stories() has the optional parameter edition which is used to set the editio
 - uk - UK Top stories
 - us - US Top stories
 - int - International Top stories
+
 ### Sports
 | Function Name          | Category   | RSS Feed                                         | Optional Parameters |
 |------------------------|------------|--------------------------------------------------|---------------------|
 | `sports().all()`       | Home       | https://feeds.bbci.co.uk/sport/rss.xml           | limit               |
 | `sports().cricket()`   | Cricket    | https://feeds.bbci.co.uk/sport/cricket/rss.xml   | limit               |
 | `sports().soccer()`    | Soccer     | https://feeds.bbci.co.uk/sport/football/rss.xml  | limit               |
-| `sports().football()`  | Football   | https://feeds.bbci.co.uk/sport/football/rss.xml  | limit               |
 | `sports().tennis()`    | Tennis     | https://feeds.bbci.co.uk/sport/tennis/rss.xml    | limit               |
 | `sports().athletics()` | Athletics  | https://feeds.bbci.co.uk/sport/athletics/rss.xml | limit               |
 | `sports().golf()`      | Golf       | https://feeds.bbci.co.uk/sport/golf/rss.xml      | limit               |
@@ -54,8 +55,6 @@ top_stories() has the optional parameter edition which is used to set the editio
 | `sports().swimming()`  | Swimming   | https://feeds.bbci.co.uk/sport/swimming/rss.xml  | limit               |
 | `sports().cycling()`   | Cycling    | https://feeds.bbci.co.uk/sport/cycling/rss.xml   | limit               |
 | `sports().formula1()`  | Formula1   | https://feeds.bbci.co.uk/sport/formula1/rss.xml  | limit               |       
-
-Note: Football and soccer return the same results.
 
 ### Weather
 - `weather().forecast(city_id)` (To get your city ID, search for it on the [BBC Weather's Website](https://www.bbc.com/weather)).
