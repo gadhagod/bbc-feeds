@@ -10,7 +10,7 @@ def bbc():
 @bbc.command()
 @click.argument('category', required=True)
 @click.option('--limit', type=click.INT, required=False, default=False, help='Limit of entries')
-@click.option('--edition', type=click.STRING, required=False, default='int', help='edition to use for top stories')
+@click.option('--edition', type=click.Choice(['us', 'uk', 'int'], case_sensitive=False), required=False, default='int', help='Edition to use for top stories')
 def news(category, edition, limit):
     if category == 'all':
         click.echo(feeds.news().all(limit=limit))
