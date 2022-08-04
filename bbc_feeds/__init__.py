@@ -9,7 +9,7 @@ def parse(url, limit):
 
 class news():
     def __init__(self):
-        self.url = 'http://feeds.bbci.co.uk/news'
+        self.url = 'https://feeds.bbci.co.uk/news'
 
     def all(self, limit=False):
         return(parse(self.url + '/rss.xml', limit=limit))
@@ -17,13 +17,13 @@ class news():
     def world(self, limit=False):
         return(parse(self.url + '/world/rss.xml', limit=limit))
 
-    def us(self, limit=False):
-        return(parse(self.url + '/rss.xml?edition=us', limit=limit))
+    def north_america(self, limit=False):
+        return(parse(self.url + '/world/us_and_canada/rss.xml', limit=limit))
 
     def uk(self, limit=False):
-        return(parse(self.url + '/news/uk/rss.xml', limit=limit))
+        return(parse(self.url + '/uk/rss.xml', limit=limit))
 
-    def enterainment(self, limit=False):
+    def entertainment(self, limit=False):
         return(parse(self.url + '/entertainment_and_arts/rss.xml', limit=limit))
 
     def business(self, limit=False):
@@ -34,13 +34,13 @@ class news():
 
     def science(self, limit=False):
         return(parse(self.url + '/science_and_environment/rss.xml', limit=limit))
-
-    def culture(self, limit=False):
-        return(parse('https://www.bbc.com/culture/feed.rss', limit=limit))
+    
+    def top_stories(self, edition='int', limit=False):
+        return(parse(self.url + f'/rss.xml?edition={edition}', limit=limit))
 
 class sports():
     def __init__(self):
-        self.url = 'http://feeds.bbci.co.uk/sport'
+        self.url = 'https://feeds.bbci.co.uk/sport'
 
     def all(self, limit=False):
         return(parse(self.url + '/rss.xml', limit=limit))
@@ -73,5 +73,5 @@ class sports():
         return(parse(self.url + '/formula1/rss.xml', limit=limit))
     
 class weather():
-    def forcast(self, city_id, limit=False):
+    def forecast(self, city_id, limit=False):
         return(parse('https://weather-broker-cdn.api.bbci.co.uk/en/forecast/rss/3day/' + str(city_id), limit=limit))
